@@ -1,0 +1,195 @@
+# ===========================================================================
+# Multilingual file for the TOS 7 Docker application "gonicdocker".
+# File name MUST be: <appid>.lang.  23-language superset (14 required by TOS).
+# The App Center picks the text matching the user's device language;
+# untranslated nodes fall back to English, which the official guide allows.
+# Fields: name (app title), auth (upstream author), descript (up to 512
+# chars), release_note, important (up to 512 chars).
+# Translations come from tosapp.json "translations"; run
+#   tosdocker lang <app>          to re-render this file
+#   tosdocker translate <app>     to see what still needs translating
+# ===========================================================================
+[en-us]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[zh-cn]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic 是自建音乐流媒体服务：扫描一个音乐目录、维护一个小型数据库，然后用 Subsonic 兼容客户端（DSub、play:Sub、Symfonium、Airsonic 客户端等）播放，支持实时转码、播放列表与播客。音乐目录只读，数据库与缓存保存在应用数据目录。"
+release_note = "1. 首个版本：基于 Docker Hub 的 Gonic 0.23.0，以非 root 容器运行。Subsonic 兼容的音乐服务，支持扫描、转码、播放列表与播客；数据库与缓存保存在应用数据目录。"
+important    = "需要 DockerEngine（缺失时应用中心会自动安装）。把音乐放进 DockerAppData/gonicdocker/music，打开界面创建管理员账号；扫描器会在启动时和定时扫描新文件。数据库、缓存与播放列表都在 DockerAppData/gonicdocker。界面为纯 HTTP，暴露到公网前请配置带 TLS 的反向代理。"
+
+[zh-hk]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic 是自建音樂串流服務：掃描一個音樂目錄、維護一個小型資料庫，然後用 Subsonic 相容用戶端（DSub、play:Sub、Symfonium、Airsonic 用戶端等）播放，支援即時轉碼、播放清單與播客。音樂目錄唯讀，資料庫與快取保存在應用資料目錄。"
+release_note = "1. 首個版本：基於 Docker Hub 的 Gonic 0.23.0，以非 root 容器運行。Subsonic 相容的音樂服務，支援掃描、轉碼、播放清單與播客；資料庫與快取保存在應用資料目錄。"
+important    = "需要 DockerEngine（缺少時應用中心會自動安裝）。把音樂放進 DockerAppData/gonicdocker/music，開啟介面建立管理員帳號；掃描器會在啟動時和定時掃描新檔案。資料庫、快取與播放清單都在 DockerAppData/gonicdocker。介面為純 HTTP，公開到互聯網前請配置帶 TLS 的反向代理。"
+
+[fr-fr]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[de-de]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[it-it]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[es-es]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[hu-hu]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ja-jp]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ko-kr]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[pl-pl]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ru-ru]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[tr-tr]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[pt-pt]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[ar-sa]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[cs-cz]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[he-il]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[id-id]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[nb-no]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[nl-nl]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[sv-se]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[th-th]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+
+[vi-vn]
+name         = "Gonic"
+auth         = "sentriz"
+version      = "@@VERSION@@"
+descript     = "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder."
+release_note = "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder."
+important    = "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+

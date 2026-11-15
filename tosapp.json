@@ -1,0 +1,131 @@
+{
+  "app_id": "gonicdocker",
+  "title": "Gonic",
+  "image": "sentriz/gonic:v0.23.0",
+  "repo_name": "gonic",
+  "mode": "wrapper",
+  "container_port": 4747,
+  "category": [
+    "Audio_Video_Entertainment"
+  ],
+  "volumes": [
+    {
+      "host": "/Volume1/DockerAppData/gonicdocker/data",
+      "container": "/data"
+    },
+    {
+      "host": "/Volume1/DockerAppData/gonicdocker/music",
+      "container": "/music"
+    },
+    {
+      "host": "/Volume1/DockerAppData/gonicdocker/cache",
+      "container": "/cache"
+    },
+    {
+      "host": "/Volume1/DockerAppData/gonicdocker/playlists",
+      "container": "/playlists"
+    }
+  ],
+  "env": {
+    "TZ": "Asia/Shanghai"
+  },
+  "auth": "sentriz",
+  "upstream_url": "https://github.com/sentriz/gonic",
+  "upstream_license": "GPL-3.0",
+  "descript": "Gonic is a music streaming server for your own library: it scans a folder of music, keeps a small database, and serves it to Subsonic-compatible clients (DSub, play:Sub, Symfonium, Airsonic clients...) with on-the-fly transcoding, playlists and podcast support. The music folder stays read-only; the database and cache live in the application data folder.",
+  "release_note": "1. First release: Gonic 0.23.0 from Docker Hub as a non-root container. Subsonic-compatible music server with scanning, transcoding, playlists and podcasts; database and cache in the application data folder.",
+  "important": "Requires DockerEngine (installed automatically if missing). Put music into DockerAppData/gonicdocker/music, open the web UI and create the admin account; the scanner picks up new files on start and on schedule. The database, cache and playlists stay in DockerAppData/gonicdocker. Plain HTTP; use a TLS reverse proxy before exposing it to the internet.",
+  "probe": {
+    "user_in_image": "(root)",
+    "entrypoint": [
+      "/sbin/tini",
+      "--"
+    ],
+    "cmd": [
+      "gonic"
+    ],
+    "exposed_ports": [
+      80
+    ],
+    "declared_volumes": [
+      "/cache",
+      "/data",
+      "/music",
+      "/podcasts"
+    ],
+    "image_healthcheck": [],
+    "digest": "sentriz/gonic@sha256:7b2298d905149ecb7e57cdd3bf7a40082758b9bda2e24454b41c17c99bf25e8f",
+    "architecture": "x86_64",
+    "platforms": [
+      "x86_64",
+      "aarch64"
+    ],
+    "http_client_in_image": "wget",
+    "trial_run": {
+      "ok": false,
+      "http_code": "",
+      "state": "exited",
+      "paths": [
+        "/music",
+        "/podcasts",
+        "/data",
+        "/cache"
+      ],
+      "host_port": 18000,
+      "log_tail": "2026/11/15 04:12:32 checking playlist directory: path does not exist, please provide one",
+      "files_in_mounts": ""
+    },
+    "docker_hub": {},
+    "github": {
+      "owner": "sentriz",
+      "repo": "gonic",
+      "description": "music streaming server / free-software subsonic server API implementation",
+      "license": "GPL-3.0",
+      "homepage": "https://web.libera.chat/?channels=#gonic"
+    }
+  },
+  "healthcheck": [
+    "CMD-SHELL",
+    "wget -q -O /dev/null http://127.0.0.1:4747/ || exit 1"
+  ],
+  "entrypoint_file": "src/entrypoint.sh",
+  "platform": "x86_64",
+  "user": "1000:1000",
+  "publisher": "Moechz",
+  "compose_project": "gonicdocker",
+  "github_repo": "gonic",
+  "upstream_version": "0.23.0",
+  "release_tag_prefix": "v",
+  "version": "0.23.0-1",
+  "help": "https://github.com/Moechz/gonic/issues",
+  "official": "https://github.com/sentriz/gonic",
+  "license": "GPL-3.0",
+  "docker_socket": false,
+  "group_add": [],
+  "host_port": 8154,
+  "healthcheck_start_period": "45s",
+  "wrapper_note": "the image listens on port 80 by default (which a non-root container cannot bind)\nand refuses to start until its podcast folder exists. This wrapper creates the\nmissing folders and starts gonic on the published port.",
+  "wrapper_note_readme": "- **Entrypoint wrapper**: creates the podcast/playlist folders and starts gonic on port 4747 with explicit `-music-path`, `-playlists-path`, `-cache-path` and `-db-path` arguments.",
+  "translations": {
+    "zh-cn": {
+      "descript": "Gonic 是自建音乐流媒体服务：扫描一个音乐目录、维护一个小型数据库，然后用 Subsonic 兼容客户端（DSub、play:Sub、Symfonium、Airsonic 客户端等）播放，支持实时转码、播放列表与播客。音乐目录只读，数据库与缓存保存在应用数据目录。",
+      "important": "需要 DockerEngine（缺失时应用中心会自动安装）。把音乐放进 DockerAppData/gonicdocker/music，打开界面创建管理员账号；扫描器会在启动时和定时扫描新文件。数据库、缓存与播放列表都在 DockerAppData/gonicdocker。界面为纯 HTTP，暴露到公网前请配置带 TLS 的反向代理。",
+      "release_note": "1. 首个版本：基于 Docker Hub 的 Gonic 0.23.0，以非 root 容器运行。Subsonic 兼容的音乐服务，支持扫描、转码、播放列表与播客；数据库与缓存保存在应用数据目录。"
+    },
+    "zh-hk": {
+      "descript": "Gonic 是自建音樂串流服務：掃描一個音樂目錄、維護一個小型資料庫，然後用 Subsonic 相容用戶端（DSub、play:Sub、Symfonium、Airsonic 用戶端等）播放，支援即時轉碼、播放清單與播客。音樂目錄唯讀，資料庫與快取保存在應用資料目錄。",
+      "important": "需要 DockerEngine（缺少時應用中心會自動安裝）。把音樂放進 DockerAppData/gonicdocker/music，開啟介面建立管理員帳號；掃描器會在啟動時和定時掃描新檔案。資料庫、快取與播放清單都在 DockerAppData/gonicdocker。介面為純 HTTP，公開到互聯網前請配置帶 TLS 的反向代理。",
+      "release_note": "1. 首個版本：基於 Docker Hub 的 Gonic 0.23.0，以非 root 容器運行。Subsonic 相容的音樂服務，支援掃描、轉碼、播放清單與播客；資料庫與快取保存在應用資料目錄。"
+    }
+  },
+  "data_notes": "`/data` keeps `gonic.db` and podcasts; `/cache` keeps transcodes and cover art; `/playlists` keeps M3U playlists; `/music` (mounted from `.../music`) is the read-only library.",
+  "design_notes": [
+    "**Port moved to 4747.** The image defaults to port 80, which uid 1000 cannot bind; the wrapper passes `-listen-addr`.",
+    "**Folders prepared up front.** Gonic refuses to start when the podcast folder is missing, so the wrapper creates it."
+  ],
+  "limitations": [
+    "- Clients must speak the Subsonic API; there is no official mobile app.",
+    "- Scanning large libraries takes a while on first start.",
+    "- The UI is plain HTTP; use a TLS reverse proxy before exposing it to the internet."
+  ]
+}
